@@ -1,0 +1,49 @@
+{
+  "skill": "sharp-solution-audit",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "AUD-001",
+      "title": ".NET 8 production app near EOS",
+      "expected": "Expected migration-planning note, not unsupported claim.",
+      "type": "manual",
+      "prompt": "Use sharp-solution-audit. Scenario: .NET 8 production app near EOS. Review the supplied or implied codebase evidence and produce the expected behavior: Expected migration-planning note, not unsupported claim."
+    },
+    {
+      "id": "AUD-002",
+      "title": ".NET 10 new app",
+      "expected": "Expected .NET 10 LTS preferred unless constraints exist.",
+      "type": "manual",
+      "prompt": "Use sharp-solution-audit. Scenario: .NET 10 new app. Review the supplied or implied codebase evidence and produce the expected behavior: Expected .NET 10 LTS preferred unless constraints exist."
+    },
+    {
+      "id": "AUD-003",
+      "title": "Missing C# 14 syntax in .NET 10 app",
+      "expected": "Expected no debt finding by default.",
+      "type": "manual",
+      "prompt": "Use sharp-solution-audit. Scenario: Missing C# 14 syntax in .NET 10 app. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no debt finding by default."
+    },
+    {
+      "id": "AUD-004",
+      "title": "Missing useful C# feature in .NET 8 causing boilerplate",
+      "expected": "Expected possible Minor debt only if maintainability harm is shown.",
+      "type": "manual",
+      "prompt": "Use sharp-solution-audit. Scenario: Missing useful C# feature in .NET 8 causing boilerplate. Review the supplied or implied codebase evidence and produce the expected behavior: Expected possible Minor debt only if maintainability harm is shown."
+    },
+    {
+      "id": "AUD-005",
+      "title": "Well-structured, up-to-date repository",
+      "expected": "Expected zero critical or major findings; clean codebase.",
+      "type": "manual",
+      "prompt": "Use sharp-solution-audit. Scenario: Well-structured, up-to-date repository. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero critical or major findings; clean codebase."
+    },
+    {
+      "id": "AUD-006",
+      "title": "Agent attempts to enforce DDD terminology",
+      "expected": "Expected false-positive rejection; agent must use neutral language only.",
+      "type": "manual",
+      "prompt": "Use sharp-solution-audit. Scenario: Agent attempts to enforce DDD terminology. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; agent must use neutral language only."
+    }
+  ]
+}

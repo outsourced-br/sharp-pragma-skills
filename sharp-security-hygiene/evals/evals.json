@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-security-hygiene",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "SEC-001",
+      "title": "Committed production connection string",
+      "expected": "Expected Critical finding.",
+      "type": "manual",
+      "prompt": "Use sharp-security-hygiene. Scenario: Committed production connection string. Review the supplied or implied codebase evidence and produce the expected behavior: Expected Critical finding."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Local sample config uses placeholder password",
+      "expected": "Expected not critical if clearly placeholder.",
+      "type": "manual",
+      "prompt": "Use sharp-security-hygiene. Scenario: Local sample config uses placeholder password. Review the supplied or implied codebase evidence and produce the expected behavior: Expected not critical if clearly placeholder."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing authorization on public API endpoint",
+      "expected": "Expected Critical finding requiring [Authorize] attributes.",
+      "type": "manual",
+      "prompt": "Use sharp-security-hygiene. Scenario: Missing authorization on public API endpoint. Review the supplied or implied codebase evidence and produce the expected behavior: Expected Critical finding requiring [Authorize] attributes."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Agent flags test-fixture dummy credentials as Critical",
+      "expected": "Expected false-positive rejection; severity depends on actual exposure tier.",
+      "type": "manual",
+      "prompt": "Use sharp-security-hygiene. Scenario: Agent flags test-fixture dummy credentials as Critical. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; severity depends on actual exposure tier."
+    },
+    {
+      "id": "SEC-005",
+      "title": "Clean, secure codebase with properly managed secrets",
+      "expected": "Expected zero findings.",
+      "type": "manual",
+      "prompt": "Use sharp-security-hygiene. Scenario: Clean, secure codebase with properly managed secrets. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings."
+    }
+  ]
+}

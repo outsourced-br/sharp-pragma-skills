@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-build-conventions",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "BLD-001",
+      "title": "Directory.Build.props uses LangVersion latest without justification",
+      "expected": "Expected finding to prefer default or justified pin.",
+      "type": "manual",
+      "prompt": "Use sharp-build-conventions. Scenario: Directory.Build.props uses LangVersion latest without justification. Review the supplied or implied codebase evidence and produce the expected behavior: Expected finding to prefer default or justified pin."
+    },
+    {
+      "id": "BLD-002",
+      "title": "Noisy repo with TreatWarningsAsErrors true globally",
+      "expected": "Expected staged rollout recommendation.",
+      "type": "manual",
+      "prompt": "Use sharp-build-conventions. Scenario: Noisy repo with TreatWarningsAsErrors true globally. Review the supplied or implied codebase evidence and produce the expected behavior: Expected staged rollout recommendation."
+    },
+    {
+      "id": "BLD-003",
+      "title": "CI lacks dotnet --info and artifact output paths",
+      "expected": "Expected reproducibility finding.",
+      "type": "manual",
+      "prompt": "Use sharp-build-conventions. Scenario: CI lacks dotnet --info and artifact output paths. Review the supplied or implied codebase evidence and produce the expected behavior: Expected reproducibility finding."
+    },
+    {
+      "id": "BLD-004",
+      "title": "Clean, centralized build props",
+      "expected": "Expected zero findings for a well-configured project.",
+      "type": "manual",
+      "prompt": "Use sharp-build-conventions. Scenario: Clean, centralized build props. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings for a well-configured project."
+    },
+    {
+      "id": "BLD-005",
+      "title": "Agent enforces global TreatWarningsAsErrors on a legacy repo",
+      "expected": "Expected false-positive rejection; prefer staged rollout.",
+      "type": "manual",
+      "prompt": "Use sharp-build-conventions. Scenario: Agent enforces global TreatWarningsAsErrors on a legacy repo. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; prefer staged rollout."
+    }
+  ]
+}

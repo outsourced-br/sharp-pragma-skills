@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-design-principles-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "DES-001",
+      "title": "Duplicate code with different meanings",
+      "expected": "Expected no DRY refactor.",
+      "type": "manual",
+      "prompt": "Use sharp-design-principles-review. Scenario: Duplicate code with different meanings. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no DRY refactor."
+    },
+    {
+      "id": "DES-002",
+      "title": "Speculative event bus with one in-process caller",
+      "expected": "Expected YAGNI/speculative abstraction finding.",
+      "type": "manual",
+      "prompt": "Use sharp-design-principles-review. Scenario: Speculative event bus with one in-process caller. Review the supplied or implied codebase evidence and produce the expected behavior: Expected YAGNI/speculative abstraction finding."
+    },
+    {
+      "id": "DES-003",
+      "title": "Tell Don't Ask violation on domain entity",
+      "expected": "Expected finding suggesting logic moves closer to the data it modifies.",
+      "type": "manual",
+      "prompt": "Use sharp-design-principles-review. Scenario: Tell Don't Ask violation on domain entity. Review the supplied or implied codebase evidence and produce the expected behavior: Expected finding suggesting logic moves closer to the data it modifies."
+    },
+    {
+      "id": "DES-004",
+      "title": "Agent complains about Tell Don't Ask on a pure DTO",
+      "expected": "Expected false-positive rejection; DTOs are meant to be asked.",
+      "type": "manual",
+      "prompt": "Use sharp-design-principles-review. Scenario: Agent complains about Tell Don't Ask on a pure DTO. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; DTOs are meant to be asked."
+    },
+    {
+      "id": "DES-005",
+      "title": "Clean, simple codebase",
+      "expected": "Expected zero findings for code that effectively adheres to KISS and YAGNI.",
+      "type": "manual",
+      "prompt": "Use sharp-design-principles-review. Scenario: Clean, simple codebase. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings for code that effectively adheres to KISS and YAGNI."
+    }
+  ]
+}

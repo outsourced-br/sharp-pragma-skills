@@ -1,0 +1,49 @@
+{
+  "skill": "sharp-architecture-pragmatic",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "ARC-001",
+      "title": "Clean architecture repo named App.Domain",
+      "expected": "Expected no rename solely due to DDD-neutral policy.",
+      "type": "manual",
+      "prompt": "Use sharp-architecture-pragmatic. Scenario: Clean architecture repo named App.Domain. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no rename solely due to DDD-neutral policy."
+    },
+    {
+      "id": "ARC-002",
+      "title": "Infrastructure project referenced by core business rules",
+      "expected": "Expected dependency direction finding.",
+      "type": "manual",
+      "prompt": "Use sharp-architecture-pragmatic. Scenario: Infrastructure project referenced by core business rules. Review the supplied or implied codebase evidence and produce the expected behavior: Expected dependency direction finding."
+    },
+    {
+      "id": "ARC-003",
+      "title": "Tiny CLI split into six layers",
+      "expected": "Expected overengineering finding.",
+      "type": "manual",
+      "prompt": "Use sharp-architecture-pragmatic. Scenario: Tiny CLI split into six layers. Review the supplied or implied codebase evidence and produce the expected behavior: Expected overengineering finding."
+    },
+    {
+      "id": "ARC-004",
+      "title": "DDD neutrality enforcement on simple CRUD",
+      "expected": "Expected false-positive rejection when agent recommends aggregates and eventing for a simple data-driven app.",
+      "type": "manual",
+      "prompt": "Use sharp-architecture-pragmatic. Scenario: DDD neutrality enforcement on simple CRUD. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection when agent recommends aggregates and eventing for a simple data-driven app."
+    },
+    {
+      "id": "ARC-005",
+      "title": "Clean single-project solution",
+      "expected": "Expected no recommendation to split projects when the single project is cohesive and lacks dependency leakage.",
+      "type": "manual",
+      "prompt": "Use sharp-architecture-pragmatic. Scenario: Clean single-project solution. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no recommendation to split projects when the single project is cohesive and lacks dependency leakage."
+    },
+    {
+      "id": "ARC-006",
+      "title": "False positive repository wrapper",
+      "expected": "Expected false-positive rejection when agent recommends a repository wrapper around a clean, isolated EF Core DbContext.",
+      "type": "manual",
+      "prompt": "Use sharp-architecture-pragmatic. Scenario: False positive repository wrapper. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection when agent recommends a repository wrapper around a clean, isolated EF Core DbContext."
+    }
+  ]
+}

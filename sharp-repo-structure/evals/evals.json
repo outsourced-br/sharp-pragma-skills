@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-repo-structure",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "REP-001",
+      "title": "Consistent /src layout",
+      "expected": "Expected no recommendation to rename to /source.",
+      "type": "manual",
+      "prompt": "Use sharp-repo-structure. Scenario: Consistent /src layout. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no recommendation to rename to /source."
+    },
+    {
+      "id": "REP-002",
+      "title": "Generated benchmark output committed under source folder",
+      "expected": "Expected finding to move generated outputs to /artifacts and gitignore.",
+      "type": "manual",
+      "prompt": "Use sharp-repo-structure. Scenario: Generated benchmark output committed under source folder. Review the supplied or implied codebase evidence and produce the expected behavior: Expected finding to move generated outputs to /artifacts and gitignore."
+    },
+    {
+      "id": "REP-003",
+      "title": "Clean standard layout",
+      "expected": "Expected zero findings for a clean, proportionate repository structure.",
+      "type": "manual",
+      "prompt": "Use sharp-repo-structure. Scenario: Clean standard layout. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings for a clean, proportionate repository structure."
+    },
+    {
+      "id": "REP-004",
+      "title": "Missing /tests directory alongside /src",
+      "expected": "Expected finding recommending separation of source and test code.",
+      "type": "manual",
+      "prompt": "Use sharp-repo-structure. Scenario: Missing /tests directory alongside /src. Review the supplied or implied codebase evidence and produce the expected behavior: Expected finding recommending separation of source and test code."
+    },
+    {
+      "id": "REP-005",
+      "title": "Agent suggests arbitrary folders when unneeded",
+      "expected": "Expected false-positive rejection; do not suggest /docs or /scripts unless there is content for them.",
+      "type": "manual",
+      "prompt": "Use sharp-repo-structure. Scenario: Agent suggests arbitrary folders when unneeded. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; do not suggest /docs or /scripts unless there is content for them."
+    }
+  ]
+}

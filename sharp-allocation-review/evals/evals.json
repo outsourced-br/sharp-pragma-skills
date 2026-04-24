@@ -1,0 +1,49 @@
+{
+  "skill": "sharp-allocation-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "ALLOC-001",
+      "title": "User asks allocation-free rewrite without benchmark",
+      "expected": "Expected benchmark skeleton and artifact path.",
+      "type": "manual",
+      "prompt": "Use sharp-allocation-review. Scenario: User asks allocation-free rewrite without benchmark. Review the supplied or implied codebase evidence and produce the expected behavior: Expected benchmark skeleton and artifact path."
+    },
+    {
+      "id": "ALLOC-002",
+      "title": "Agent suggests Span for cold path",
+      "expected": "Expected false-positive rejection.",
+      "type": "manual",
+      "prompt": "Use sharp-allocation-review. Scenario: Agent suggests Span for cold path. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection."
+    },
+    {
+      "id": "ALLOC-003",
+      "title": "Hot parser benchmark shows high allocations",
+      "expected": "Expected allocation-free recommendation with correctness tests.",
+      "type": "manual",
+      "prompt": "Use sharp-allocation-review. Scenario: Hot parser benchmark shows high allocations. Review the supplied or implied codebase evidence and produce the expected behavior: Expected allocation-free recommendation with correctness tests."
+    },
+    {
+      "id": "ALLOC-004",
+      "title": "Measure before Refactor rule enforcement",
+      "expected": "Expected output type to be 'Measure', not 'Refactor' when agent suggests string.Create without profiler or benchmark evidence.",
+      "type": "manual",
+      "prompt": "Use sharp-allocation-review. Scenario: Measure before Refactor rule enforcement. Review the supplied or implied codebase evidence and produce the expected behavior: Expected output type to be 'Measure', not 'Refactor' when agent suggests string.Create without profiler or benchmark evidence."
+    },
+    {
+      "id": "ALLOC-005",
+      "title": "Clean codebase with appropriate initialization allocations",
+      "expected": "Expected no findings when the codebase allocates only during startup or low-traffic paths.",
+      "type": "manual",
+      "prompt": "Use sharp-allocation-review. Scenario: Clean codebase with appropriate initialization allocations. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no findings when the codebase allocates only during startup or low-traffic paths."
+    },
+    {
+      "id": "ALLOC-006",
+      "title": "ArrayPool false positive on startup",
+      "expected": "Expected false-positive rejection when agent suggests using ArrayPool for a tiny array allocated once during service registration.",
+      "type": "manual",
+      "prompt": "Use sharp-allocation-review. Scenario: ArrayPool false positive on startup. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection when agent suggests using ArrayPool for a tiny array allocated once during service registration."
+    }
+  ]
+}

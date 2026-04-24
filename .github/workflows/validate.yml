@@ -1,0 +1,80 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate eval scenarios
+        shell: pwsh
+        run: ./scripts/run-evals.ps1
+
+      - name: Validate release metadata and skill manifests
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+
+          $required = @(
+            "README.md",
+            "LICENSE",
+            "CITATION.cff",
+            "SECURITY.md",
+            "CODE_OF_CONDUCT.md",
+            "SUPPORT.md",
+            "CONTRIBUTING.md",
+            "llms.txt",
+            "VERSION"
+          )
+
+          foreach ($path in $required) {
+            if (-not (Test-Path $path)) {
+              throw "Missing required release file: $path"
+            }
+          }
+
+          if (-not ((Get-Content LICENSE -TotalCount 1) -match "GNU AFFERO GENERAL PUBLIC LICENSE")) {
+            throw "LICENSE must contain GNU AGPL v3 text."
+          }
+
+          foreach ($skill in Get-ChildItem -Directory -Filter "sharp-*") {
+            $skillFile = Join-Path $skill.FullName "SKILL.md"
+            if (-not (Test-Path $skillFile)) {
+              throw "Missing SKILL.md in $($skill.Name)"
+            }
+
+            $lines = Get-Content $skillFile
+            if ($lines.Count -lt 5 -or $lines[0] -ne "---") {
+              throw "$($skill.Name)/SKILL.md is missing YAML frontmatter."
+            }
+
+            $endIndex = [Array]::IndexOf($lines, "---", 1)
+            if ($endIndex -lt 0) {
+              throw "$($skill.Name)/SKILL.md has unterminated YAML frontmatter."
+            }
+
+            $frontmatter = $lines[1..($endIndex - 1)]
+            if (-not ($frontmatter -match "^name:\s+$($skill.Name)$")) {
+              throw "$($skill.Name)/SKILL.md frontmatter name must match folder name."
+            }
+
+            if (-not ($frontmatter -match "^description:\s+.")) {
+              throw "$($skill.Name)/SKILL.md frontmatter needs a description."
+            }
+
+            Select-String -Path $skillFile -Pattern '^- `resources/([^`]+)`' | ForEach-Object {
+              $resourceName = $_.Matches[0].Groups[1].Value
+              $resourcePath = Join-Path $skill.FullName (Join-Path "resources" $resourceName)
+              if (-not (Test-Path $resourcePath)) {
+                throw "$($skill.Name) references missing resource $resourceName"
+              }
+            }
+          }

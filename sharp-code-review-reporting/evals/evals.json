@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-code-review-reporting",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "RPT-001",
+      "title": "Duplicate findings from NuGet and Security",
+      "expected": "Expected deduplicate and cross-reference.",
+      "type": "manual",
+      "prompt": "Use sharp-code-review-reporting. Scenario: Duplicate findings from NuGet and Security. Review the supplied or implied codebase evidence and produce the expected behavior: Expected deduplicate and cross-reference."
+    },
+    {
+      "id": "RPT-002",
+      "title": "One finding has weak evidence",
+      "expected": "Expected downgrade or mark Needs evidence.",
+      "type": "manual",
+      "prompt": "Use sharp-code-review-reporting. Scenario: One finding has weak evidence. Review the supplied or implied codebase evidence and produce the expected behavior: Expected downgrade or mark Needs evidence."
+    },
+    {
+      "id": "RPT-003",
+      "title": "DDD term appears in prescriptive recommendation",
+      "expected": "Expected correction to neutral language.",
+      "type": "manual",
+      "prompt": "Use sharp-code-review-reporting. Scenario: DDD term appears in prescriptive recommendation. Review the supplied or implied codebase evidence and produce the expected behavior: Expected correction to neutral language."
+    },
+    {
+      "id": "RPT-004",
+      "title": "Consolidating multiple minor naming issues into one summary finding",
+      "expected": "Expected grouped output rather than 50 separate minor findings.",
+      "type": "manual",
+      "prompt": "Use sharp-code-review-reporting. Scenario: Consolidating multiple minor naming issues into one summary finding. Review the supplied or implied codebase evidence and produce the expected behavior: Expected grouped output rather than 50 separate minor findings."
+    },
+    {
+      "id": "RPT-005",
+      "title": "Agent outputs a generic 'LGTM' without structured evidence",
+      "expected": "Expected adherence to the reporting style guide requiring actionable output format.",
+      "type": "manual",
+      "prompt": "Use sharp-code-review-reporting. Scenario: Agent outputs a generic 'LGTM' without structured evidence. Review the supplied or implied codebase evidence and produce the expected behavior: Expected adherence to the reporting style guide requiring actionable output format."
+    }
+  ]
+}

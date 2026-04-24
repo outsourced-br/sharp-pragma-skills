@@ -1,0 +1,47 @@
+# SharpPragma Skills
+
+> SharpPragma Skills is a DDD-neutral .NET review skill pack for agentic development tools. It provides one full-solution orchestrator and fifteen focused review lenses for architecture, code quality, build, dependencies, analyzers, tests, security, performance, allocations, and reporting.
+
+The package uses a directed workflow. Companion skill links are context and handoff references only; agents must not recursively traverse them. The package-level version in `VERSION` is the distribution source of truth.
+
+## Core
+
+- [README](README.md): Package overview, skill list, routing model, installation summary, and operating principles.
+- [Review Workflow](docs/review-workflow.md): The ordered full-solution workflow and lens responsibilities.
+- [Companion Skills Graph](docs/companion-skills-graph.md): Directed workflow and non-recursive companion relationships.
+- [Shared Guardrails](docs/shared-guardrails.md): DDD-neutrality, evidence-before-refactor, performance/allocation, and anti-overengineering rules.
+- [Severity and Reporting Model](docs/severity-and-reporting-model.md): Required finding schema and severity definitions.
+- [Installing Skills](docs/installing-skills.md): Installation instructions for Codex, Gemini, and custom skill directory layouts.
+
+## Skills
+
+- [Full Solution Review](sharp-full-solution-review/SKILL.md): Orchestrates the complete workflow.
+- [Solution Audit](sharp-solution-audit/SKILL.md): Maps solution shape, target frameworks, project graph, and scope.
+- [Repository Structure](sharp-repo-structure/SKILL.md): Reviews layout, naming, artifacts, docs, and source/test separation.
+- [Build Conventions](sharp-build-conventions/SKILL.md): Reviews props, targets, package files, output paths, SDK pinning, and CI reproducibility.
+- [NuGet Dependency Review](sharp-nuget-dependency-review/SKILL.md): Reviews package health, vulnerabilities, source mapping, lock files, and update strategy.
+- [Analyzer Policy Review](sharp-analyzer-policy-review/SKILL.md): Reviews analyzer profiles, `.editorconfig`, and staged rollout strategy.
+- [Pragmatic Architecture](sharp-architecture-pragmatic/SKILL.md): Reviews architecture boundaries without DDD prescription.
+- [Code Quality Review](sharp-code-quality-review/SKILL.md): Reviews maintainability, naming, cohesion, async/resource management, nullability, exceptions, and logging.
+- [Design Principles Review](sharp-design-principles-review/SKILL.md): Reviews KISS, DRY, YAGNI, Tell Don't Ask, reuse quality, and speculative abstraction.
+- [SOLID Deep Review](sharp-solid-deep-review/SKILL.md): Reviews SOLID where concrete harm exists.
+- [Composition Over Inheritance](sharp-composition-over-inheritance/SKILL.md): Reviews harmful inheritance and justified composition migrations.
+- [Performance Review](sharp-performance-review/SKILL.md): Reviews measurable runtime risks and measurement plans.
+- [Allocation Review](sharp-allocation-review/SKILL.md): Reviews allocation hotspots with benchmark or profiling discipline.
+- [Test Review](sharp-test-review/SKILL.md): Reviews test strategy, useful coverage, mocks, fixtures, and scenario tests.
+- [Security Hygiene](sharp-security-hygiene/SKILL.md): Reviews secrets, config, auth, dependency hygiene, and production exposure.
+- [Code Review Reporting](sharp-code-review-reporting/SKILL.md): Normalizes, deduplicates, and formats findings.
+
+## Release And Contribution
+
+- [Release Policy](docs/release-policy.md): Versioning and release checklist.
+- [Eval Guide](docs/eval-guide.md): Manual scenario eval model and result recording.
+- [Contributing](CONTRIBUTING.md): Contribution expectations for skills, output contracts, evals, and workflow integration.
+- [Security Policy](SECURITY.md): Supported versions and vulnerability reporting process.
+- [Citation Metadata](CITATION.cff): Machine-readable citation metadata.
+
+## Optional
+
+- [Migration From Unprefixed Skill Names](docs/migrating-from-unprefixed-skill-names.md): Legacy skill-name mapping.
+- [Scoping And Filtering](docs/scoping-and-filtering.md): Guidance for targeted reviews without full orchestration.
+- [Changelog](CHANGELOG.md): Version history.
