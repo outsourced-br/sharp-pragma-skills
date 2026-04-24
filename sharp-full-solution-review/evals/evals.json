@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-full-solution-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "FULL-001",
+      "title": "Full review uses orchestrator and does not recursively follow companion links",
+      "expected": "Agent runs fifteen lenses once in workflow order and deduplicates findings.",
+      "type": "manual",
+      "prompt": "Use sharp-full-solution-review. Scenario: Full review uses orchestrator and does not recursively follow companion links. Review the supplied or implied codebase evidence and produce the expected behavior: Agent runs fifteen lenses once in workflow order and deduplicates findings."
+    },
+    {
+      "id": "FULL-002",
+      "title": "Companion graph is not treated as traversal loop",
+      "expected": "Agent refuses to loop backward from reporting to audit except as final summary.",
+      "type": "manual",
+      "prompt": "Use sharp-full-solution-review. Scenario: Companion graph is not treated as traversal loop. Review the supplied or implied codebase evidence and produce the expected behavior: Agent refuses to loop backward from reporting to audit except as final summary."
+    },
+    {
+      "id": "FULL-003",
+      "title": "Clean codebase with no major findings",
+      "expected": "Expected zero critical or major findings; produces a concise report of only Informational observations.",
+      "type": "manual",
+      "prompt": "Use sharp-full-solution-review. Scenario: Clean codebase with no major findings. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero critical or major findings; produces a concise report of only Informational observations."
+    },
+    {
+      "id": "FULL-004",
+      "title": "Cross-skill finding deduplication",
+      "expected": "Expected orchestrator to merge overlapping analyzer, code-quality, and solid-deep findings into single actionable items.",
+      "type": "manual",
+      "prompt": "Use sharp-full-solution-review. Scenario: Cross-skill finding deduplication. Review the supplied or implied codebase evidence and produce the expected behavior: Expected orchestrator to merge overlapping analyzer, code-quality, and solid-deep findings into single actionable items."
+    },
+    {
+      "id": "FULL-005",
+      "title": "Evidence requirement enforcement across skills",
+      "expected": "Expected performance and allocation issues lacking evidence to be explicitly routed to 'Measure' tasks instead of 'Refactor'.",
+      "type": "manual",
+      "prompt": "Use sharp-full-solution-review. Scenario: Evidence requirement enforcement across skills. Review the supplied or implied codebase evidence and produce the expected behavior: Expected performance and allocation issues lacking evidence to be explicitly routed to 'Measure' tasks instead of 'Refactor'."
+    }
+  ]
+}

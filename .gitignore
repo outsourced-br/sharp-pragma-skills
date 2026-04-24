@@ -1,0 +1,8 @@
+*.zip
+artifacts/
+node_modules/
+evals/results*.jsonl
+.gemini/
+.claude/skills/sharp-*/
+.DS_Store
+Thumbs.db

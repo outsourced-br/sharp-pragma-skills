@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-test-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "TEST-001",
+      "title": "Money estimate logic lacks scenario tests",
+      "expected": "Expected Major or Minor scenario-test finding depending risk.",
+      "type": "manual",
+      "prompt": "Use sharp-test-review. Scenario: Money estimate logic lacks scenario tests. Review the supplied or implied codebase evidence and produce the expected behavior: Expected Major or Minor scenario-test finding depending risk."
+    },
+    {
+      "id": "TEST-002",
+      "title": "Coverage is 82%",
+      "expected": "Expected no arbitrary 100% recommendation.",
+      "type": "manual",
+      "prompt": "Use sharp-test-review. Scenario: Coverage is 82%. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no arbitrary 100% recommendation."
+    },
+    {
+      "id": "TEST-003",
+      "title": "Mocking internal domain logic instead of edges",
+      "expected": "Expected finding for over-mocking leading to brittle tests.",
+      "type": "manual",
+      "prompt": "Use sharp-test-review. Scenario: Mocking internal domain logic instead of edges. Review the supplied or implied codebase evidence and produce the expected behavior: Expected finding for over-mocking leading to brittle tests."
+    },
+    {
+      "id": "TEST-004",
+      "title": "Agent complains about mocking an SMTP client",
+      "expected": "Expected false-positive rejection; edge dependencies should be mocked.",
+      "type": "manual",
+      "prompt": "Use sharp-test-review. Scenario: Agent complains about mocking an SMTP client. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; edge dependencies should be mocked."
+    },
+    {
+      "id": "TEST-005",
+      "title": "Clean, fast, behavior-driven test suite",
+      "expected": "Expected zero findings for effective, maintainable test coverage.",
+      "type": "manual",
+      "prompt": "Use sharp-test-review. Scenario: Clean, fast, behavior-driven test suite. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings for effective, maintainable test coverage."
+    }
+  ]
+}

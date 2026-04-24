@@ -1,0 +1,49 @@
+{
+  "skill": "sharp-nuget-dependency-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "NUG-001",
+      "title": "Vulnerable transitive package",
+      "expected": "Expected identify nearest direct package before upgrade.",
+      "type": "manual",
+      "prompt": "Use sharp-nuget-dependency-review. Scenario: Vulnerable transitive package. Review the supplied or implied codebase evidence and produce the expected behavior: Expected identify nearest direct package before upgrade."
+    },
+    {
+      "id": "NUG-002",
+      "title": "Multiple package sources without source mapping",
+      "expected": "Expected package source mapping finding.",
+      "type": "manual",
+      "prompt": "Use sharp-nuget-dependency-review. Scenario: Multiple package sources without source mapping. Review the supplied or implied codebase evidence and produce the expected behavior: Expected package source mapping finding."
+    },
+    {
+      "id": "NUG-003",
+      "title": "net10 project has no explicit NuGetAudit policy",
+      "expected": "Expected note about default all and documenting policy.",
+      "type": "manual",
+      "prompt": "Use sharp-nuget-dependency-review. Scenario: net10 project has no explicit NuGetAudit policy. Review the supplied or implied codebase evidence and produce the expected behavior: Expected note about default all and documenting policy."
+    },
+    {
+      "id": "NUG-004",
+      "title": "Major package update available only",
+      "expected": "Expected Informational unless security/support risk exists.",
+      "type": "manual",
+      "prompt": "Use sharp-nuget-dependency-review. Scenario: Major package update available only. Review the supplied or implied codebase evidence and produce the expected behavior: Expected Informational unless security/support risk exists."
+    },
+    {
+      "id": "NUG-005",
+      "title": "Clean, up-to-date dependencies with CPM",
+      "expected": "Expected zero findings for a fully updated, central package managed repo.",
+      "type": "manual",
+      "prompt": "Use sharp-nuget-dependency-review. Scenario: Clean, up-to-date dependencies with CPM. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings for a fully updated, central package managed repo."
+    },
+    {
+      "id": "NUG-006",
+      "title": "Agent suggests updating a pinned legacy package without checking release notes",
+      "expected": "Expected guardrail check for breaking changes before blind major updates.",
+      "type": "manual",
+      "prompt": "Use sharp-nuget-dependency-review. Scenario: Agent suggests updating a pinned legacy package without checking release notes. Review the supplied or implied codebase evidence and produce the expected behavior: Expected guardrail check for breaking changes before blind major updates."
+    }
+  ]
+}

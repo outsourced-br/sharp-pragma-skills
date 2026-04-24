@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-performance-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "PERF-001",
+      "title": "Slow import loop but no measurements",
+      "expected": "Expected profiling/benchmark plan, not refactor.",
+      "type": "manual",
+      "prompt": "Use sharp-performance-review. Scenario: Slow import loop but no measurements. Review the supplied or implied codebase evidence and produce the expected behavior: Expected profiling/benchmark plan, not refactor."
+    },
+    {
+      "id": "PERF-002",
+      "title": "N+1 EF query evidence",
+      "expected": "Expected performance finding with query-shape fix.",
+      "type": "manual",
+      "prompt": "Use sharp-performance-review. Scenario: N+1 EF query evidence. Review the supplied or implied codebase evidence and produce the expected behavior: Expected performance finding with query-shape fix."
+    },
+    {
+      "id": "PERF-003",
+      "title": "Agent recommends complex caching for a low-traffic admin page",
+      "expected": "Expected false-positive rejection; measure before refactoring.",
+      "type": "manual",
+      "prompt": "Use sharp-performance-review. Scenario: Agent recommends complex caching for a low-traffic admin page. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; measure before refactoring."
+    },
+    {
+      "id": "PERF-004",
+      "title": "Clean, performant codebase with no obvious hot paths",
+      "expected": "Expected zero findings; defer optimization until actual metrics exist.",
+      "type": "manual",
+      "prompt": "Use sharp-performance-review. Scenario: Clean, performant codebase with no obvious hot paths. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings; defer optimization until actual metrics exist."
+    },
+    {
+      "id": "PERF-005",
+      "title": "Clear hot path serialization issue with benchmark data",
+      "expected": "Expected concrete Refactor recommendation based on the evidence.",
+      "type": "manual",
+      "prompt": "Use sharp-performance-review. Scenario: Clear hot path serialization issue with benchmark data. Review the supplied or implied codebase evidence and produce the expected behavior: Expected concrete Refactor recommendation based on the evidence."
+    }
+  ]
+}
