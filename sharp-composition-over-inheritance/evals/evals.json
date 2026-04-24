@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-composition-over-inheritance",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "COM-001",
+      "title": "Base constructor calls virtual method",
+      "expected": "Expected fragile base class finding.",
+      "type": "manual",
+      "prompt": "Use sharp-composition-over-inheritance. Scenario: Base constructor calls virtual method. Review the supplied or implied codebase evidence and produce the expected behavior: Expected fragile base class finding."
+    },
+    {
+      "id": "COM-002",
+      "title": "Exception class inherits Exception",
+      "expected": "Expected acceptable inheritance.",
+      "type": "manual",
+      "prompt": "Use sharp-composition-over-inheritance. Scenario: Exception class inherits Exception. Review the supplied or implied codebase evidence and produce the expected behavior: Expected acceptable inheritance."
+    },
+    {
+      "id": "COM-003",
+      "title": "Deeply nested God-class hierarchy",
+      "expected": "Expected finding recommending strategy pattern or injected dependencies.",
+      "type": "manual",
+      "prompt": "Use sharp-composition-over-inheritance. Scenario: Deeply nested God-class hierarchy. Review the supplied or implied codebase evidence and produce the expected behavior: Expected finding recommending strategy pattern or injected dependencies."
+    },
+    {
+      "id": "COM-004",
+      "title": "Agent recommends composition for a simple 1-level Template Method pattern",
+      "expected": "Expected false-positive rejection; shallow template methods are acceptable.",
+      "type": "manual",
+      "prompt": "Use sharp-composition-over-inheritance. Scenario: Agent recommends composition for a simple 1-level Template Method pattern. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; shallow template methods are acceptable."
+    },
+    {
+      "id": "COM-005",
+      "title": "Clean codebase using strategy pattern",
+      "expected": "Expected zero findings for properly composed dependencies.",
+      "type": "manual",
+      "prompt": "Use sharp-composition-over-inheritance. Scenario: Clean codebase using strategy pattern. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings for properly composed dependencies."
+    }
+  ]
+}

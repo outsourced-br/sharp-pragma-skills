@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use SharpPragma Skills in research, audits, evaluations, or published tooling, please cite it using these metadata."
+title: "SharpPragma Skills"
+version: 3.0.0
+date-released: "2026-04-24"
+type: software
+authors:
+  - name: "SharpPragma Skills contributors"
+abstract: "A DDD-neutral .NET review skill pack for agentic development workflows, covering solution audits, repository structure, build conventions, dependency health, analyzer policy, architecture, code quality, design principles, SOLID, composition, performance, allocations, tests, security hygiene, and review reporting."
+keywords:
+  - dotnet
+  - csharp
+  - code-review
+  - ai-agents
+  - software-quality
+license: AGPL-3.0-only

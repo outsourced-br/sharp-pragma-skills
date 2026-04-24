@@ -1,0 +1,20 @@
+{
+  "name": "@outsourced-br/sharp-pragma-skills",
+  "version": "3.0.0",
+  "description": "Pragmatic .NET review skill pack for agentic development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/outsourced-br/sharp-pragma-skills.git"
+  },
+  "bin": {
+    "install-sharp-skills": "./bin/install.js"
+  },
+  "files": [
+    "bin/**/*",
+    "sharp-*/**/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "AGPL-3.0-only"
+}

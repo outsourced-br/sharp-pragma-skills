@@ -1,0 +1,49 @@
+{
+  "skill": "sharp-solid-deep-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "SOL-001",
+      "title": "Concrete class without interface",
+      "expected": "Expected no finding unless substitution/test seam needed.",
+      "type": "manual",
+      "prompt": "Use sharp-solid-deep-review. Scenario: Concrete class without interface. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no finding unless substitution/test seam needed."
+    },
+    {
+      "id": "SOL-002",
+      "title": "High-level policy directly creates file system dependency",
+      "expected": "Expected DIP finding if it harms testing/change.",
+      "type": "manual",
+      "prompt": "Use sharp-solid-deep-review. Scenario: High-level policy directly creates file system dependency. Review the supplied or implied codebase evidence and produce the expected behavior: Expected DIP finding if it harms testing/change."
+    },
+    {
+      "id": "SOL-003",
+      "title": "Speculative abstraction (YAGNI)",
+      "expected": "Expected false-positive rejection when agent suggests extracting an interface for a class with only one implementation and no test mocks.",
+      "type": "manual",
+      "prompt": "Use sharp-solid-deep-review. Scenario: Speculative abstraction (YAGNI). Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection when agent suggests extracting an interface for a class with only one implementation and no test mocks."
+    },
+    {
+      "id": "SOL-004",
+      "title": "Clean well-structured codebase",
+      "expected": "Expected zero findings when the repository has proportionate abstractions and clear boundaries.",
+      "type": "manual",
+      "prompt": "Use sharp-solid-deep-review. Scenario: Clean well-structured codebase. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings when the repository has proportionate abstractions and clear boundaries."
+    },
+    {
+      "id": "SOL-005",
+      "title": "OCP false positive on stable code",
+      "expected": "Expected no recommendation to apply Open/Closed Principle when the underlying code is working and never changes.",
+      "type": "manual",
+      "prompt": "Use sharp-solid-deep-review. Scenario: OCP false positive on stable code. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no recommendation to apply Open/Closed Principle when the underlying code is working and never changes."
+    },
+    {
+      "id": "SOL-006",
+      "title": "ISP true positive",
+      "expected": "Expected Interface Segregation Principle finding when a class implements a 10-method interface but only uses 1 method, causing bloated dependencies.",
+      "type": "manual",
+      "prompt": "Use sharp-solid-deep-review. Scenario: ISP true positive. Review the supplied or implied codebase evidence and produce the expected behavior: Expected Interface Segregation Principle finding when a class implements a 10-method interface but only uses 1 method, causing bloated dependencies."
+    }
+  ]
+}

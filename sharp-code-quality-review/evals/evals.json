@@ -1,0 +1,42 @@
+{
+  "skill": "sharp-code-quality-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "CQ-001",
+      "title": "Async IO path blocks on .Result",
+      "expected": "Expected code-quality finding.",
+      "type": "manual",
+      "prompt": "Use sharp-code-quality-review. Scenario: Async IO path blocks on .Result. Review the supplied or implied codebase evidence and produce the expected behavior: Expected code-quality finding."
+    },
+    {
+      "id": "CQ-002",
+      "title": "Injected HttpClient disposed by consumer",
+      "expected": "Expected resource ownership warning.",
+      "type": "manual",
+      "prompt": "Use sharp-code-quality-review. Scenario: Injected HttpClient disposed by consumer. Review the supplied or implied codebase evidence and produce the expected behavior: Expected resource ownership warning."
+    },
+    {
+      "id": "CQ-003",
+      "title": "Long method with one obvious workflow",
+      "expected": "Expected not automatically split unless cohesion suffers.",
+      "type": "manual",
+      "prompt": "Use sharp-code-quality-review. Scenario: Long method with one obvious workflow. Review the supplied or implied codebase evidence and produce the expected behavior: Expected not automatically split unless cohesion suffers."
+    },
+    {
+      "id": "CQ-004",
+      "title": "Clean, cohesive, simple methods",
+      "expected": "Expected zero findings for readable, standard code.",
+      "type": "manual",
+      "prompt": "Use sharp-code-quality-review. Scenario: Clean, cohesive, simple methods. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings for readable, standard code."
+    },
+    {
+      "id": "CQ-005",
+      "title": "Agent suggests complex design pattern for a simple if-else chain",
+      "expected": "Expected false-positive rejection; avoid overengineering simple control flow.",
+      "type": "manual",
+      "prompt": "Use sharp-code-quality-review. Scenario: Agent suggests complex design pattern for a simple if-else chain. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; avoid overengineering simple control flow."
+    }
+  ]
+}

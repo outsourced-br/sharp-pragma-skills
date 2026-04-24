@@ -1,0 +1,49 @@
+{
+  "skill": "sharp-analyzer-policy-review",
+  "version": "3.0.0",
+  "manual": true,
+  "scenarios": [
+    {
+      "id": "ANZ-001",
+      "title": "SDK-style net10 project lacks Microsoft.CodeAnalysis.NetAnalyzers package",
+      "expected": "Expected no recommendation to add package by default.",
+      "type": "manual",
+      "prompt": "Use sharp-analyzer-policy-review. Scenario: SDK-style net10 project lacks Microsoft.CodeAnalysis.NetAnalyzers package. Review the supplied or implied codebase evidence and produce the expected behavior: Expected no recommendation to add package by default."
+    },
+    {
+      "id": "ANZ-002",
+      "title": "Security review asks for analyzer profile",
+      "expected": "Expected security-focused analyzer profile, not style rules first.",
+      "type": "manual",
+      "prompt": "Use sharp-analyzer-policy-review. Scenario: Security review asks for analyzer profile. Review the supplied or implied codebase evidence and produce the expected behavior: Expected security-focused analyzer profile, not style rules first."
+    },
+    {
+      "id": "ANZ-003",
+      "title": "Performance review asks for analyzers",
+      "expected": "Expected performance profile plus measurement caveat.",
+      "type": "manual",
+      "prompt": "Use sharp-analyzer-policy-review. Scenario: Performance review asks for analyzers. Review the supplied or implied codebase evidence and produce the expected behavior: Expected performance profile plus measurement caveat."
+    },
+    {
+      "id": "ANZ-004",
+      "title": "Noisy legacy repo",
+      "expected": "Expected staged analyzer rollout.",
+      "type": "manual",
+      "prompt": "Use sharp-analyzer-policy-review. Scenario: Noisy legacy repo. Review the supplied or implied codebase evidence and produce the expected behavior: Expected staged analyzer rollout."
+    },
+    {
+      "id": "ANZ-005",
+      "title": "Clean, well-configured .editorconfig",
+      "expected": "Expected zero findings; appropriate rules are already enabled.",
+      "type": "manual",
+      "prompt": "Use sharp-analyzer-policy-review. Scenario: Clean, well-configured .editorconfig. Review the supplied or implied codebase evidence and produce the expected behavior: Expected zero findings; appropriate rules are already enabled."
+    },
+    {
+      "id": "ANZ-006",
+      "title": "Agent suggests enabling all rules as errors without staged migration",
+      "expected": "Expected false-positive rejection; avoid big-bang breakage on legacy codebases.",
+      "type": "manual",
+      "prompt": "Use sharp-analyzer-policy-review. Scenario: Agent suggests enabling all rules as errors without staged migration. Review the supplied or implied codebase evidence and produce the expected behavior: Expected false-positive rejection; avoid big-bang breakage on legacy codebases."
+    }
+  ]
+}
